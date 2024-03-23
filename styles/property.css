@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px; /* Уменьшаем высоту заголовка */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    height: 100%; /* Занимает всю высоту заголовка */
+}
+
+nav-container {
+    background-color: #056056; /* Красный цвет контейнера */
+    border-radius: 15px;
+    padding: 8px; /* Добавляем отступы к контейнеру */
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    position: relative;
+    margin-left: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 15px;
+    background: #056056;
+    padding: 8px 20px; /* Изменяем отступы */
+    transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #056056;
+    background: #ffffff;
+    
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    background: #ffffff;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+nav a.active::after {
+    opacity: 0.1;
+}
